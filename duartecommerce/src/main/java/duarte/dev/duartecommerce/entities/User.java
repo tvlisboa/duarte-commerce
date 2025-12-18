@@ -89,6 +89,11 @@ public class User {
         this.birthDate = birthDate;
     }
 
+    /**
+     * Criado um get para poder acessar a lista de pedidos
+     * que estao para aquele usuario
+     */
+
     public List<Order> getOrders() {
         return orders;
     }
