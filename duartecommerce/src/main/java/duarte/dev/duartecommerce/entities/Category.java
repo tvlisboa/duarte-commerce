@@ -14,6 +14,10 @@ public class Category {
     private Long id;
     private String name;
 
+    /**
+     * Referencia a uma lista de produtos.
+     */
+
     @ManyToMany(mappedBy = "categories")
     private Set<Product> products = new HashSet<>();
 

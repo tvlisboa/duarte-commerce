@@ -25,6 +25,11 @@ public class Product {
      * usamo o set
      */
 
+
+    /**
+     * Referencia a uma lista de categorias.
+     */
+
     @ManyToMany
     @JoinTable(name = "tb_product_category",
             joinColumns = @JoinColumn(name = "product_id"),
