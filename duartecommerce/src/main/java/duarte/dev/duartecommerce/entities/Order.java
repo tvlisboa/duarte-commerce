@@ -19,7 +19,7 @@ public class Order {
 
     /**
      * Varios pedidos podem ser de um
-     * unico client
+     * unico cliente
      */
 
     @ManyToOne(fetch = FetchType.LAZY)
