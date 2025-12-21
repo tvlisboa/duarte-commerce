@@ -5,6 +5,11 @@ import jakarta.persistence.*;
 import java.util.HashSet;
 import java.util.Set;
 
+/**
+ * Utilizei a notacao @Column(columnDefinitios = "text")
+ * pois o texto pode passar de 255 de caracteres
+ */
+
 @Entity
 @Table(name = "tb_products")
 public class Product {
@@ -17,6 +22,8 @@ public class Product {
     @Column(columnDefinition = "TEXT")
     private String description;
     private Double price;
+
+    @Column(columnDefinition = "TEXT")
     private String imgUrl;
 
     /**
