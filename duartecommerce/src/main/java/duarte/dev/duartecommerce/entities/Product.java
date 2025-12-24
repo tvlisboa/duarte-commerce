@@ -29,7 +29,7 @@ public class Product {
     /**
      * Colecao de categorias
      * para nao haver repeticao no caso de uma listaa
-     * usamo o set
+     * usamos o set e somente o get para puxar a lista
      */
 
 
