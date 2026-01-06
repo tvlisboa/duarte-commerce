@@ -26,6 +26,10 @@ public class Order {
     @JoinColumn(name = "client_id")
     private User client;
 
+    /**
+     * Associacao de um pedido com pagamento
+     * */
+
     @OneToOne(mappedBy = "order", cascade = CascadeType.ALL)
     private Payment payment;
 

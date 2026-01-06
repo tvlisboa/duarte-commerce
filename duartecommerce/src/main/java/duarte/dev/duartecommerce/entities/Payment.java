@@ -15,6 +15,10 @@ public class Payment {
     @Column(columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
     private Instant moment;
 
+    /**
+     * Associacao de um pagamento com pedido
+     * */
+
     @OneToOne(cascade = CascadeType.ALL)
     @MapsId
     private Order order;

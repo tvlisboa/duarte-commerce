@@ -22,7 +22,8 @@ public class User {
     private LocalDate birthDate;
 
     /**
-     * Um client pode ter varios pedidos
+     * Um client pode ter varios pedidos e mapeado pelo client
+     * como tratamos de uma lista de pedidos, usamos um array
      */
 
     @OneToMany(mappedBy = "client")
@@ -94,6 +95,8 @@ public class User {
     /**
      * Criado um get para poder acessar a lista de pedidos
      * que estao para aquele usuario
+     * como serão somente acessados
+     * nao ha necessidade de set
      */
 
     public List<Order> getOrders() {
