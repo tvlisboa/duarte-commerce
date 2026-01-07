@@ -4,6 +4,11 @@ import jakarta.persistence.Embeddable;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
+/**
+ * Serão mapeados com as chaves estrangeiras na
+ * tabela de associacao
+ * order_id e product_id
+ */
 
 @Embeddable
 public class OrderItemPK {

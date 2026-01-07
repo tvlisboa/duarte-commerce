@@ -4,6 +4,11 @@ import jakarta.persistence.EmbeddedId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Table;
 
+/**
+ * Tabela referente a duas entidades
+ * ao Produto e Pedido
+ */
+
 @Entity
 @Table(name = "tb_order_item")
 public class OrderItem {

@@ -6,6 +6,11 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * A anotacao no atributo email, identifica o email como unico
+ * impossibilitando a repeticao do email
+ */
+
 @Entity
 @Table(name = "tb_users")
 public class User {
