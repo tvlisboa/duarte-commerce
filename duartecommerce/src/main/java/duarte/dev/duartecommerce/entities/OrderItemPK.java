@@ -5,6 +5,8 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 
 /**
+ * Representa a chave primaria composta
+ * Injetando o pedido e produto
  * Serão mapeados com as chaves estrangeiras na
  * tabela de associacao
  * order_id e product_id
