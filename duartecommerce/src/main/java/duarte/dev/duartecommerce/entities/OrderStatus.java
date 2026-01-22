@@ -1,5 +1,7 @@
 package duarte.dev.duartecommerce.entities;
 
+import java.io.Serializable;
+
 /**
  * Em JAVA por convenção,
  * utiliza-se uppercase para
@@ -11,7 +13,7 @@ package duarte.dev.duartecommerce.entities;
  * STATUS 4 - CANCELED
  */
 
-public enum OrderStatus {
+public enum OrderStatus implements Serializable {
     WAITING_PAYMENT,
     PAID,
     SHIPPED,

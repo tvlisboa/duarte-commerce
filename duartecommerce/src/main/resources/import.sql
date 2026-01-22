@@ -16,7 +16,7 @@ INSERT INTO tb_products(NAME, DESCRIPTION, PRICE, IMG_URL) VALUES ('TAG HAUER - 
 INSERT INTO tb_products(NAME, DESCRIPTION, PRICE, IMG_URL) VALUES ('TAG HAUER - FORMULA 1 - SOLARGRAPH', 'Bold and energetic, this 38 mm TAG Heuer Formula 1 pairs high-performance engineering with an eye-catching pink accent. ', 16250.00,'https://www.tagheuer.com/br/pt/rel%C3%B3gios/colec%C3%B5es/tag-heuer-formula-1/38-mm-th50-00/WBY111D.FT8084.html');
 
 --INFORMACOES PARA ALIMENTAR A TABELA DE PRODUTOS - CATEGORIAS SMARTWATCHS
---CATEGORIA 2 SMARTWATCHES
+--CATEGORIA 2 SMARTWATCHS
 INSERT INTO tb_products(NAME, DESCRIPTION, PRICE, IMG_URL) VALUES ('TAG HAUER - CONNECTED BLACK CARBON', 'Os relógios TAG Heuer Connected combinam séculos de savoir-faire em relojoaria com tecnologia de ponta.', 17200.00,'https://www.tagheuer.com/br/pt/smartwatches/colec%C3%B5es/tag-heuer-connected/45-mm/SBT8A10.BA0003.html');
 INSERT INTO tb_products(NAME, DESCRIPTION, PRICE, IMG_URL) VALUES ('TAG HAUER - CONNECTED RED PRIZM', 'O TAG Heuer Connected Calibre E5 une códigos da relojoaria suíça com inovação digital', 17200.00,'https://www.tagheuer.com/br/pt/tag-heuer-connected-calibre-e5/collection-connected.html');
 INSERT INTO tb_products(NAME, DESCRIPTION, PRICE, IMG_URL) VALUES ('TAG HAUER - CONNECTED GREEN ESMERALD', 'De pulseiras integradas a hastes facetadas, cada detalhe do TAG Heuer Connected Calibre E5 reflete nosso savoir-faire, projetado para proporcionar conforto, desempenho e elegância marcante.', 17200.00,'https://www.tagheuer.com/br/pt/smartwatches/colec%C3%B5es/tag-heuer-connected/45-mm/SBT8A10.BA0003.html');
@@ -79,3 +79,29 @@ INSERT INTO tb_orders (MOMENT, STATUS, CLIENT_ID) VALUES(TIMESTAMP WITH TIME ZON
 INSERT INTO tb_orders (MOMENT, STATUS, CLIENT_ID) VALUES(TIMESTAMP WITH TIME ZONE '2026-01-16T21:45:00Z', 1, 5);
 INSERT INTO tb_orders (MOMENT, STATUS, CLIENT_ID) VALUES(TIMESTAMP WITH TIME ZONE '2026-01-16T21:45:00Z', 1, 5);
 INSERT INTO tb_orders (MOMENT, STATUS, CLIENT_ID) VALUES(TIMESTAMP WITH TIME ZONE '2026-01-19T21:45:00Z', 2, 5);
+
+--Alimetando a tabela de itens de pedido
+--PEDIDO 1
+INSERT INTO tb_order_item (order_id, product_id, quantity, price) VALUES (1, 1, 1, 38890.00);
+INSERT INTO tb_order_item (order_id, product_id, quantity, price) VALUES (1, 10, 1, 2830.00);
+
+--PEDIDO 2
+INSERT INTO tb_order_item (order_id, product_id, quantity, price) VALUES (2, 3, 1, 79300.00);
+
+--PEDIDO 3
+INSERT INTO tb_order_item (order_id, product_id, quantity, price) VALUES (3, 8, 1, 17200.00);
+INSERT INTO tb_order_item (order_id, product_id, quantity, price) VALUES (3, 7, 1, 17200.00);
+INSERT INTO tb_order_item (order_id, product_id, quantity, price) VALUES (3, 12, 1, 1750.00);
+
+--PEDIDO 4
+INSERT INTO tb_order_item (order_id, product_id, quantity, price) VALUES (4, 4, 1, 62800.00);
+
+--PEDIDO 5
+INSERT INTO tb_order_item (order_id, product_id, quantity, price) VALUES (5, 2, 1, 29490.00);
+INSERT INTO tb_order_item (order_id, product_id, quantity, price) VALUES (5, 6, 1, 17200.00);
+INSERT INTO tb_order_item (order_id, product_id, quantity, price) VALUES (5, 11, 1, 1750.00);
+INSERT INTO tb_order_item (order_id, product_id, quantity, price) VALUES (5, 12, 1, 2850.00);
+
+INSERT INTO tb_payments (order_id, moment) VALUES (3, TIMESTAMP WITH TIME ZONE '2022-07-25T15:00:00Z');
+INSERT INTO tb_payments (order_id, moment) VALUES (5, TIMESTAMP WITH TIME ZONE '2022-07-30T11:00:00Z');
+
