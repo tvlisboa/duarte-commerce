@@ -2,6 +2,8 @@ package duarte.dev.duartecommerce.entities;
 
 import jakarta.persistence.*;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +22,8 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-
+    @NotBlank(message = "O e-mail não pode estar em branco")
+    @Email(message = "Formato de e-mail inválido")
     @Column(unique = true)
     private String email;
     private String password;
