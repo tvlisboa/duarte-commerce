@@ -2,6 +2,7 @@ package duarte.dev.duartecommerce.entities;
 
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +24,7 @@ public class Product {
 
     @Column(columnDefinition = "TEXT")
     private String description;
-    private Double price;
+    private BigDecimal price;
 
     @Column(columnDefinition = "TEXT")
     private String imgUrl;
@@ -53,7 +54,7 @@ public class Product {
 
     public Product(Long id, String name,
                    String description,
-                   Double price,
+                   BigDecimal price,
                    String imgUrl) {
         this.id = id;
         this.name = name;
@@ -86,11 +87,11 @@ public class Product {
         this.description = description;
     }
 
-    public Double getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 

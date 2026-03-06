@@ -31,7 +31,7 @@ public class User {
     private LocalDate birthDate;
 
     /**
-     * Um client pode ter varios pedidos e mapeado pelo client
+     * Um cliente pode ter varios pedidos e mapeado pelo client
      * como tratamos de uma lista de pedidos, usamos um array
      */
 
